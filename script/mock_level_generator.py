@@ -10,7 +10,7 @@ OUT_DIR.mkdir(exist_ok=True)
 depth = 100.000   # starting elevation in metres
 while True:
     ts = dt.datetime.utcnow().replace(second=0, microsecond=0)
-    depth += random.gauss(0, 0.002)        # random walk ±2 mm
+    depth += random.gauss(0, 20.002)        # random walk ±2 mm
     temp  = 15 + random.gauss(0, 0.1)      # °C
     batt  = 4.10 - random.uniform(0, 0.0002)
     fname = f"LS123456_{ts.strftime('%Y%m%d%H%M')}.csv"
